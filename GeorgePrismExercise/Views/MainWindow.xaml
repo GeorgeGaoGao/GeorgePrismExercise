@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GeorgePrismExercise.Views"
         xmlns:prism="http://prismlibrary.com/" 
-        xmlns:viewmodels="clr-namespace:GeorgePrismExercise.ViewModels" xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:viewmodels="clr-namespace:GeorgePrismExercise.ViewModels" 
+        xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:share="clr-namespace:GeorgePrism.Core.Share;assembly=GeorgePrism.Core.Share"
         mc:Ignorable="d"
         prism:ViewModelLocator.AutoWireViewModel="True"
         d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel }"
@@ -15,16 +17,20 @@
             <RowDefinition Height="100"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Canvas Background="LightBlue">
-            <Button Command="{Binding GetContentCommand}" Content="获取内容按钮" Width="200" Height="50" Canvas.Left="24" Canvas.Top="25"/>
-            <TextBlock Text="{Binding TimeOfGettingContent}">
-                <b:Interaction.Triggers>
-                    <b:EventTrigger EventName="MouseUp">
-                        <b:InvokeCommandAction Command="{Binding TextBlockMouseupCommandWithParameter}" 
-                                               CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=TextBlock}}"/>
-                    </b:EventTrigger>
-                </b:Interaction.Triggers>
-            </TextBlock>
-        </Canvas>
+        <ContentControl prism:RegionManager.RegionName="{x:Static share:RegionNames.HeaderRegion}"/>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <ContentControl Grid.Row="0" Grid.Column="0" prism:RegionManager.RegionName="{x:Static share:RegionNames.AdapterRegion}"/>
+            <ContentControl Grid.Row="0" Grid.Column="1" prism:RegionManager.RegionName="{x:Static share:RegionNames.DialogRegion}"/>
+            <ContentControl Grid.Row="1" Grid.Column="0" prism:RegionManager.RegionName="{x:Static share:RegionNames.EventRegion}"/>
+            <ContentControl Grid.Row="1" Grid.Column="1" prism:RegionManager.RegionName="{x:Static share:RegionNames.NavigationRegion}"/>
+        </Grid>
     </Grid>
 </Window>

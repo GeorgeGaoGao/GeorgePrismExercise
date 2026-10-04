@@ -1,3 +1,13 @@
 <Solution>
+  <Folder Name="/Core/">
+    <Project Path="GeorgePrism.Core.Share/GeorgePrism.Core.Share.csproj" Id="4242d17c-56f0-42e3-9080-7ca9dd92918c" />
+  </Folder>
+  <Folder Name="/Model/" />
+  <Folder Name="/Modules/">
+    <Project Path="GeorgePrism.Modules.AdapterModule/GeorgePrism.Modules.AdapterModule.csproj" Id="9cf648e0-6da1-46ca-8cc4-5f49637f390e" />
+    <Project Path="GeorgePrism.Modules.DialogModule/GeorgePrism.Modules.DialogModule.csproj" Id="a1fc334f-4812-4002-9609-214261f185c3" />
+    <Project Path="GeorgePrism.Modules.EventModule/GeorgePrism.Modules.EventModule.csproj" Id="20ff070a-85f4-4016-85ae-abffacd6dfa5" />
+    <Project Path="GeorgePrism.Modules.NavigationModule/GeorgePrism.Modules.NavigationModule.csproj" Id="cfbf857f-4d5f-4359-a010-cf7bd6f62e75" />
+  </Folder>
   <Project Path="GeorgePrismExercise/GeorgePrismExercise.csproj" />
 </Solution>

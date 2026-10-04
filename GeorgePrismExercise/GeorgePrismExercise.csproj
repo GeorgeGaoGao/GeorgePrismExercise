@@ -12,4 +12,12 @@
     <PackageReference Include="Prism.DryIoc" Version="9.0.537" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GeorgePrism.Core.Share\GeorgePrism.Core.Share.csproj" />
+    <ProjectReference Include="..\GeorgePrism.Modules.AdapterModule\GeorgePrism.Modules.AdapterModule.csproj" />
+    <ProjectReference Include="..\GeorgePrism.Modules.DialogModule\GeorgePrism.Modules.DialogModule.csproj" />
+    <ProjectReference Include="..\GeorgePrism.Modules.EventModule\GeorgePrism.Modules.EventModule.csproj" />
+    <ProjectReference Include="..\GeorgePrism.Modules.NavigationModule\GeorgePrism.Modules.NavigationModule.csproj" />
+  </ItemGroup>
+
 </Project>
